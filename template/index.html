@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Document</title>
+    <style>
+        .dirs-container ul {
+            display: flex; 
+            flex-wrap: wrap; 
+            margin-top: 60px;
+            padding: 0;
+        }
+        .dirs-container ul li {
+            width: 20%;
+            margin: 4% 0 0 4%; 
+            list-style: none; 
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <%  
+        %>
+        <div class="dirs-container">
+            <ul>
+        <%
+                dirs.forEach(dir=>{%>
+                    <li>
+                        <a 
+                            href="<%=dir.url + '/'%>"
+                            <%=!dir.isDir ? 'style=color:green' : ''%>                      
+                        >
+                            <%=dir.isDir ? '/' + dir.name : dir.name%>
+                        </a>
+                    </li>
+                <%})
+        %>
+            </ul>
+        </div>
+        <%
+    %>
+</body>
+</html>

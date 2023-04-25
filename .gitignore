@@ -3,3 +3,4 @@
 /ssl/wangyu.cloud_bundle.pem
 /ssl/wangyu.cloud.csr
 /ssl/wangyu.cloud.key
+/public/build/*

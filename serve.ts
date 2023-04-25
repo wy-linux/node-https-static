@@ -20,6 +20,6 @@ function onError(error: any) {
     console.log(error);
 }
 
-function onListening(error: any) {
+function onListening() {
     console.log('Listening on', port);
 }
