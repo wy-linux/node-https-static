@@ -1,7 +1,6 @@
 import express from 'express'
 import fs from 'fs'
 import path from 'path'
-import url from 'url'
 import ejs from 'ejs'
 const serverStatic = require('node-wangyu-server-static')
 
@@ -27,11 +26,9 @@ app.use(
 )
 
 app.use('/', async (req, res) => {
-    let { pathname } = url.parse(req.url);
     const fileContent = await ejs.renderFile('./template/index.html', {
         dirs: publicDirStats.map((dir) => ({
             name: dir.name,
-            url: path.join(pathname!, dir.name),
             isDir: dir.isDir
         }))
     });

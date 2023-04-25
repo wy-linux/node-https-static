@@ -32,7 +32,7 @@
                 dirs.forEach(dir=>{%>
                     <li>
                         <a 
-                            href="<%=dir.url + (dir.isDir ? '/' : '')%>"
+                            href="/<%=dir.name + (dir.isDir ? '/' : '')%>"
                             <%=!dir.isDir ? 'style=color:green' : ''%>                      
                         >
                             <%=dir.isDir ? '/' + dir.name : dir.name%>
